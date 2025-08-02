@@ -1,0 +1,59 @@
+
+.change-password-page{
+
+    max-width:500px;
+    margin-left:auto !important;
+    margin-right:auto !important;
+
+    padding-left:20px;
+    padding-right:20px;
+    padding-top:150px;
+}
+
+
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -320px;
+    width: 400px;
+    height: 100vh;
+    background-color: #263737;
+    color: #fff;
+    padding: 1rem;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 56px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 32px;
+}
+
+.sidebar ul li {
+    margin: 64 0;
+}
+
+.sidebar ul li a {
+    color: #fff;
+}
+
+.menu-btn {
+    font-size: 42px;
+    position: fixed;
+    bottom: 36px;
+    left: 21px;
+    z-index: 1100;
+    cursor: pointer;
+    color: #fff;
+}
+
+.first {
+    padding-top: 56px;
+}
