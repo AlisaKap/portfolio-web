@@ -2,9 +2,8 @@ import type { Metadata } from "next";
 import '@/app/reset.css'
 import type { PropsWithChildren} from "react";
 import React from 'react';
+import Sidebar from '@/components/Universal/Sidebar/Sidebar';
 import AntDesignProvider from "@/Providers/AntDesignProvider/AntDesignProvider";
-import ErrorPage from './error/page';
-
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,14 +14,10 @@ export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="ru">
       <body>
-
-      <React.StrictMode>
-          <ErrorPage />
-      </React.StrictMode>
-
-      {/*<AntDesignProvider>*/}
-      {/*    {children}*/}
-      {/*</AntDesignProvider>*/}
+          <AntDesignProvider>
+              <Sidebar />
+              <div>{children}</div>
+          </AntDesignProvider>
       </body>
     </html>
   );
