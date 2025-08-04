@@ -10,8 +10,8 @@ export default function Page() {
         <html>
             <body>
             <Sidebar />
-                <div className="error-page">
-                    <img src='/gifs/clown.gif' alt="Clown" />
+                <div className="global-not-found-page">
+                    <img className="global-not-found-page" src='/gifs/clown.gif' alt="Clown" />
                     <Text className="h1">УПС...</Text>
                     <Text className="h2">Раздел до сих пор в разработке</Text>
                 </div>
