@@ -1,7 +1,96 @@
-.background-container { //переделать потом в код
+.background-container {
   background-image: url('/images/info/aboutMe.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
 }
+
+.background-container img {
+
+  top: 0;
+  right: -6%;
+  height: 80vh;
+  min-height: 80vh;
+  position: fixed;
+
+}
+
+
+.grid-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.grid-list p {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 15px;
+  margin-bottom: 1.3rem;
+  color: #512C10;
+}
+
+h6 {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 45px;
+  font-weight: bold;
+  color: #fff;
+}
+
+h5 {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 22px;
+  color: #fff;
+}
+
+h3 {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  margin-top: 1.2rem;
+  color: #512C10;
+}
+
+h2 {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 22px;
+  color: #512C10;
+}
+
+h1 {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 45px;
+  font-weight: bold;
+  color: #B34343;
+}
+
+.list-block-educate h4 {
+  margin-top: 1.5rem;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 14px;
+  color: #512C10;
+}
+
+.list-block-educate p {
+  margin-bottom: 0.5rem;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 13px;
+  color: #7E6069;
+}
+
+.list-block-hack p {
+  margin-top: 1.5rem;
+  line-height: 1.5;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 15px;
+  color: #fff;
+}
+
+

@@ -1,0 +1,60 @@
+.rotated-container {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  z-index: 10;
+}
+
+.check-content {
+  padding: 4.5rem;
+  height: 1200px;
+  width: 600px;
+  position: relative;
+}
+
+.check-content2 {
+  background: #FBECD5;
+  padding: 2rem;
+  height: 1200px;
+  width: 560px;
+  position: relative;
+}
+
+.check-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.check-list {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.decor {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.circle {
+  width: 16px;
+  height: 16px;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.line {
+  width: 30px;
+  height: 2px;
+  background-color: #000;
+}
+
+.check-image {
+  width: 100%;
+  margin-top: 1rem;
+}

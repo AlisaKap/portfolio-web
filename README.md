@@ -30,7 +30,7 @@ npm run build
 Запустить production версию приложения можно через команду:
 
 ```bash
-npm run start
+npm npm install framer-motion@11
 ```
 
 Добавить новые зависимости можно через использование следующей команды
