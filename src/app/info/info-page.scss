@@ -102,26 +102,3 @@ h1 {
   cursor: pointer;
   z-index: 1000;
 }
-
-.letter-icon:hover {
-  transform: scale(1.1);
-}
-
-.modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
-}
-
-.modal-content {
-  max-width: 90%;
-  max-height: 90%;
-  background: white;
-  padding: 10px;
-  border-radius: 8px;
-}
-

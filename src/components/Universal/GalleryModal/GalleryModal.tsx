@@ -28,11 +28,11 @@ export default function GalleryModal({ blocks }: GalleryModalProps) {
 
     return (
         <div className="blocks" >
-            <div className="blocks-container" style={{ display: "flex", flexWrap: "wrap", gap: 16 }}>
+            <div className="blocks-container" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 16 }}>
                 {blocks.map((block) => (
                     <div
                         key={block.id}
-                        style={{ cursor: "pointer", width: 200, border: "1px solid #ccc", padding: 8, boxSizing: "border-box" }}
+                        style={{ cursor: "pointer", border: "1px solid #ccc", padding: 8, boxSizing: "border-box" }}
                         onClick={() => setActiveBlock(block)}
                     >
                         <img src={block.coverImage} alt="" style={{ width: "100%", display: "block", objectFit: "cover"  }} />
