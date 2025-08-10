@@ -1,0 +1,18 @@
+.tabs {
+  padding-left:110px;
+  margin: 0 auto;
+  font-family: Ubuntu,sans-serif;
+}
+.tabs button{
+  flex: 1;
+  padding: 12px 0;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  transition: color 0.2s, border-bottom 0.2s;
+}
+  .tabs-container {
+    padding: 20px;
+    border-top: none;
+    box-sizing: border-box;
+  }

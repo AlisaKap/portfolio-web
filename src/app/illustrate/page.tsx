@@ -31,7 +31,10 @@ export default function Page() {
 
     return (
         <main>
-        <Gallery images={images} />
+            <div className="illustrate-page">
+                <img src='/gifs/platypus.gif' alt="Platypus" />
+            </div>
+            <Gallery images={images} />
         </main>
     );
 }

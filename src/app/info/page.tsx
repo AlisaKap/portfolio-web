@@ -1,16 +1,25 @@
-import React from "react";
-import Sidebar from '@/components/Universal/Sidebar/Sidebar';
-import Text from '@/components/Universal/Text/Text';
+'use client';
+
+import React, { useState } from "react";
 import '@fontsource/ubuntu';
 import  '@/app/info/info-page.scss'
 import RotatedCheck from "@/components/RotatedCheck/RotatedCheck";
+import Image from 'next/image';
 
 
 export default function InfoPage() {
 
     return (
         <div className="background-container">
+
             <img src='/images/info/mePhoto.png' alt="Card" />
+
+            <img
+                src="/images/info/letter.svg"
+                alt="Letter"
+                className="letter-icon"
+            />
+
             <div style={{position: "relative", height: "100vh"}}>
                 <RotatedCheck
                     angle={5.03}

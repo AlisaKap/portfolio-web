@@ -1,0 +1,43 @@
+.background-container-home {
+    background-image: url('/images/Back.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding-left:80px;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+
+}
+
+.background-container-home h1 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 56px;
+    font-weight: lighter;
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+    padding-top:100px;
+}
+
+.background-container-home h2 {
+    font-family: "MyFont", sans-serif;
+    font-size: 220px;
+    color: #D8FFF7;
+    text-align: center;
+    margin: 0 auto;
+    padding-top:0;
+}
+
+.background-container-home div {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 32px;
+    font-weight: lighter;
+    color: #D8FFF7;
+    text-align: center;
+    bottom: 32px;
+    position: absolute;
+    left: 0;
+    right: 0;
+}

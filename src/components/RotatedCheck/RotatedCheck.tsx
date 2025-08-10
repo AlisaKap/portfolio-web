@@ -11,6 +11,7 @@ type Props = {
     delay?: number;
     positionStyle?: React.CSSProperties;
     backgroundColor?: string;
+
 };
 
 export default function RotatedCheck( {
