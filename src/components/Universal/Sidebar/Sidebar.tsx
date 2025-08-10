@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '@/components/Universal/Sidebar/Sidebar.scss'
 
 import DesignActive from '@/components/Universal/icon/tsx/DesignActive'
@@ -20,7 +20,18 @@ import { usePathname } from 'next/navigation';
 
 const Sidebar = () => {
     const [open, setOpen] = useState(false);
+    const [gap, setGap] = useState(56);
     const pathname = usePathname();
+
+    useEffect(() => {
+        const updateGap = () => {
+            setGap(window.innerWidth <= 1300 ? 0 : 56);
+        };
+
+        updateGap();
+        window.addEventListener("resize", updateGap);
+        return () => window.removeEventListener("resize", updateGap);
+    }, []);
 
 return (
     <>
@@ -28,8 +39,8 @@ return (
             {open ? '✖' : '☰'}
         </div>
 
-        <div className={`sidebar ${open ? 'open' : 'closed'}`}>
-            <Flex vertical gap={56}>
+        <div className={`sidebar ${open ? "open" : "closed"}`}>
+            <Flex vertical gap={gap}>
                 <Link href="/" className="home" >
                     <img className="homeIcon" src="/icons/home.png" alt="Главная" />
                     {open && <span>Elleipsis</span>}

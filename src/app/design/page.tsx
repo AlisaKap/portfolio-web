@@ -7,6 +7,7 @@ import '@fontsource/ubuntu';
 import Tabs from "@/components/Universal/Tabs/Tabs";
 import GalleryModal from "@/components/Universal/GalleryModal/GalleryModal";
 import InProgress from "@/app/inProgress/page";
+import ImageFlipbook from "@/components/Universal/ImageFlipbook/ImageFlipbook";
 
 const blocksData1 = [
     {
@@ -98,10 +99,24 @@ const blocksData2 = [
     },
 ];
 
+    const imagesMagazine = [
+        "/images/design/grafic/0.png", "/images/design/grafic/1.png", "/images/design/grafic/2.png", "/images/design/grafic/3.png",
+        "/images/design/grafic/4.png", "/images/design/grafic/5.png", "/images/design/grafic/6.png", "/images/design/grafic/7.png",
+        "/images/design/grafic/8.png", "/images/design/grafic/9.png", "/images/design/grafic/10.png", "/images/design/grafic/11.png",
+        "/images/design/grafic/12.png", "/images/design/grafic/13.png", "/images/design/grafic/14.png", "/images/design/grafic/15.png",
+        "/images/design/grafic/16.png", "/images/design/grafic/17.png", "/images/design/grafic/18.png", "/images/design/grafic/19.png",
+        "/images/design/grafic/20.png", "/images/design/grafic/21.png", "/images/design/grafic/22.png", "/images/design/grafic/23.png",
+        "/images/design/grafic/24.png", "/images/design/grafic/25.png", "/images/design/grafic/26.png", "/images/design/grafic/27.png",
+        "/images/design/grafic/28.png", "/images/design/grafic/29.png", "/images/design/grafic/30.png", "/images/design/grafic/31.png",
+        "/images/design/grafic/32.png", "/images/design/grafic/33.png", "/images/design/grafic/34.png", "/images/design/grafic/35.png",
+        "/images/design/grafic/36.png", "/images/design/grafic/37.png", "/images/design/grafic/38.png", "/images/design/grafic/39.png",
+        "/images/design/grafic/40.png", "/images/design/grafic/41.png", "/images/design/grafic/42.png"
+    ];
+
 const tabsPage1 = [
     { label: "UX/XI дизайн", content: <div><GalleryModal blocks={blocksData1} /></div> },
     { label: "Промышленный дизайн", content: <div><GalleryModal blocks={blocksData2} /></div> },
-    { label: "Графический дизайн", content: <div><InProgress /></div> },
+    { label: "Графический дизайн", content: <div><ImageFlipbook images={imagesMagazine} width={452} height={700} /></div> },
     { label: "Геймдизайн", content: <div><InProgress /></div> },
     { label: "3Д-дизайн", content: <div><InProgress /></div> },
 ];
