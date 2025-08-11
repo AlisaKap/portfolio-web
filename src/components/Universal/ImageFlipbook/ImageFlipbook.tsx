@@ -18,6 +18,7 @@ export default function ImageFlipbook({
     return (
         <div style={{ display: "flex", justifyContent: "center" }}>
             <HTMLFlipBook
+                style={{}}
                 width={width}
                 height={height}
                 minWidth={200}
