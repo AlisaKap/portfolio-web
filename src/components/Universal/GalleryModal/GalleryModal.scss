@@ -43,11 +43,9 @@
   image-rendering: high-quality;
 
   @media (max-width: 768px) {
-    padding: 16px;
   }
 
   @media (max-width: 480px) {
-    padding: 12px;
     max-width: 95vw;
     max-height: 85vh;
   }
