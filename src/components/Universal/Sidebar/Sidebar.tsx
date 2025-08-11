@@ -25,7 +25,7 @@ const Sidebar = () => {
 
     useEffect(() => {
         const updateGap = () => {
-            setGap(window.innerWidth <= 1300 ? 2 : 56);
+            setGap(window.innerWidth <= 1024 ? 8 : 56);
         };
 
         updateGap();
