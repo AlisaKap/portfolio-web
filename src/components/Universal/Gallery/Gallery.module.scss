@@ -5,6 +5,12 @@
 
   @media (max-width: 1024px) {
     padding-left: 16px;
+    column-count: 3;
+    column-gap: 0.5rem;
+  }
+  @media (max-width: 480px) {
+    padding: 4px;
+    column-count: 2;
   }
 
   img {
@@ -16,6 +22,10 @@
 
     &:hover {
       transform: scale(1.02);
+    }
+
+    @media (max-width: 1024px) {
+      margin-bottom: 0.5rem;
     }
   }
 
@@ -39,7 +49,7 @@
 .modal {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.8); //заменить потом
+  background: rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;

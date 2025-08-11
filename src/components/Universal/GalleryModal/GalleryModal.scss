@@ -64,14 +64,27 @@
   border: none;
   color: #6E6C6C;
 
+
+  @media (max-width: 480px) {
+    padding: 6px 12px;
+  }
+}
+
+.blocks-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+
   @media (max-width: 768px) {
-    font-size: 14px;
+    grid-template-columns: repeat(2, 0.5fr);
+    gap: 8px;
   }
 
   @media (max-width: 480px) {
-    font-size: 8px;
-    padding: 6px 12px;
+    grid-template-columns: repeat(1, 2fr);
+    gap: 4px;
   }
+
 }
 
 .blocks-container p {

@@ -27,9 +27,9 @@ export default function ImageFlipbook({
                 maxHeight={700}
                 size="stretch"
                 startPage={0}
-                showCover={true}
+                showCover={false}
                 drawShadow={true}
-                flippingTime={1000}
+                flippingTime={10}
                 usePortrait={true}
                 startZIndex={0}
                 autoSize={true}

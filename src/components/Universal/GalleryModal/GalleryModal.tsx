@@ -5,7 +5,6 @@ type Block = {
     id: string | number;
     coverImage: string;
     images: string[];
-    text: string;
 };
 
 type GalleryModalProps = {
@@ -28,15 +27,14 @@ export default function GalleryModal({ blocks }: GalleryModalProps) {
 
     return (
         <div className="blocks" >
-            <div className="blocks-container" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 16 }}>
+            <div className="blocks-container" style={{  }}>
                 {blocks.map((block) => (
                     <div
                         key={block.id}
-                        style={{ cursor: "pointer", border: "1px solid #ccc", padding: 8, boxSizing: "border-box" }}
+                        style={{ cursor: "pointer", borderRadius: "8px", boxShadow: "0 1px 2px rgba(0,0,0,0.1)", boxSizing: "border-box" }}
                         onClick={() => setActiveBlock(block)}
                     >
                         <img src={block.coverImage} alt="" style={{ width: "100%", display: "block", objectFit: "cover"  }} />
-                        <p>{block.text}</p>
                     </div>
                 ))}
             </div>

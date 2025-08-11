@@ -25,12 +25,37 @@ const Sidebar = () => {
 
     useEffect(() => {
         const updateGap = () => {
-            setGap(window.innerWidth <= 1024 ? 8 : 56);
+            const width = window.innerWidth;
+
+            if (width <= 480) setGap(4);
+            else if (width <= 768) setGap(6);
+            else if (width <= 1024) setGap(8);
+            else setGap(56);
         };
 
         updateGap();
-        window.addEventListener("resize", updateGap);
-        return () => window.removeEventListener("resize", updateGap);
+        window.addEventListener('resize', updateGap);
+        return () => window.removeEventListener('resize', updateGap);
+    }, []);
+
+    useEffect(() => {
+        if (window.innerWidth > 768) {
+            setOpen(false);
+        } else {
+            setOpen(true);
+        }
+    }, [pathname]);
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth <= 1024) { setOpen(true);
+            } else { setOpen(false);
+            }
+        };
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
     }, []);
 
 return (

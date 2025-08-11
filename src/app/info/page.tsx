@@ -1,32 +1,44 @@
 'use client';
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import '@fontsource/ubuntu';
 import  '@/app/info/info-page.scss'
 import RotatedCheck from "@/components/RotatedCheck/RotatedCheck";
-import Image from 'next/image';
 
 
 export default function InfoPage() {
+    const [showComponent, setShowComponent] = useState(true);
+    const [leftPos, setLeftPos] = useState('40%');
+
+    useEffect(() => {
+        const handleResize = () => {
+            const width = window.innerWidth;
+            setShowComponent(width > 1400);
+
+            if (width > 1600) setLeftPos('46%');
+            else if (width > 1400) setLeftPos('52%');
+            else if (width > 1200) setLeftPos('54%');
+            else setLeftPos('56%');
+        };
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     return (
         <div className="background-container">
-
             <img src='/images/info/mePhoto.png' alt="Card" />
+            <img src="/images/info/letter.svg" alt="Letter" className="letter-icon" />
 
-            <img
-                src="/images/info/letter.svg"
-                alt="Letter"
-                className="letter-icon"
-            />
-
-            <div style={{position: "relative", height: "100vh"}}>
-                <RotatedCheck
-                    angle={5.03}
-                    initialY={"100vh"}
-                    delay={0.2}
-                    backgroundColor="#AD3032"
-                    content={
+            <div style={{ position: "relative", height: "100vh" }}>
+                {showComponent && (
+                    <RotatedCheck
+                        angle={5.03}
+                        initialY={"100vh"}
+                        delay={0.2}
+                        backgroundColor="#AD3032"
+                        content={
                         <>
                             <h5>Список побед и наград на</h5>
                             <h6>ХАКАТОНАХ </h6>
@@ -59,9 +71,10 @@ export default function InfoPage() {
 
                             </div>
                         </>
-                    }
-                    positionStyle={{top: "20%", left: "42%"}}
-                />
+                        }
+                        positionStyle={{ top: "20%", left: leftPos }}
+                    />
+                )}
 
                 <RotatedCheck
                     angle={-5.97}
@@ -113,10 +126,9 @@ export default function InfoPage() {
                             </div>
                         </>
                     }
-                    positionStyle={{top: "3%", left: "10%"}}
+                    positionStyle={{ top: "0", left: "10%" }}
                 />
             </div>
-
         </div>
     );
 }

@@ -12,6 +12,12 @@
   height: 100vh;
   z-index: -1;
 
+  .letter-icon {
+    top: 0;
+    right: 400px;
+    z-index: -1000;
+  }
+
 }
 
 .background-container img {
@@ -20,7 +26,7 @@
   right: -6%;
   height: 80vh;
   position: fixed;
-  z-index: -1;
+  z-index: 2;
 
   @media (max-width: 1024px) {
     display: none;
@@ -42,9 +48,6 @@
     gap: 1rem;
   }
 
-  @media (min-width: 768px) {
-    grid-template-columns: 1fr 1fr;
-  }
 }
 
 .grid-list p {
@@ -58,7 +61,7 @@
   }
 
   @media (max-width: 480px) {
-    font-size: 13px;
+    font-size: 8px;
   }
 }
 
@@ -73,11 +76,11 @@ h6 {
   }
 
   @media (max-width: 768px) {
-    font-size: 32px;
+    font-size: 30px;
   }
 
   @media (max-width: 480px) {
-    font-size: 26px;
+    font-size: 24px;
   }
 }
 
@@ -91,7 +94,7 @@ h5 {
   }
 
   @media (max-width: 480px) {
-    font-size: 18px;
+    font-size: 14px;
   }
 }
 
@@ -108,7 +111,7 @@ h3 {
   }
 
   @media (max-width: 480px) {
-    font-size: 18px;
+    font-size: 14px;
   }
 }
 
@@ -122,7 +125,7 @@ h2 {
   }
 
   @media (max-width: 480px) {
-    font-size: 18px;
+    font-size: 14px;
   }
 }
 
@@ -137,11 +140,11 @@ h1 {
   }
 
   @media (max-width: 768px) {
-    font-size: 32px;
+    font-size: 30px;
   }
 
   @media (max-width: 480px) {
-    font-size: 26px;
+    font-size: 24px;
   }
 }
 
@@ -152,7 +155,7 @@ h1 {
   color: #512C10;
 
   @media (max-width: 480px) {
-    font-size: 13px;
+    font-size: 11px;
   }
 }
 
@@ -163,7 +166,7 @@ h1 {
   color: #7E6069;
 
   @media (max-width: 480px) {
-    font-size: 12px;
+    font-size: 11px;
   }
 }
 
@@ -179,15 +182,8 @@ h1 {
   }
 
   @media (max-width: 480px) {
-    font-size: 13px;
+    font-size: 11px;
   }
 }
 
-.letter-icon {
-  position: relative;
-  bottom: 20px;
-  left: 460px;
-  cursor: pointer;
-  z-index: 1000;
-  margin-top: 1rem;
-}
+
