@@ -10,9 +10,55 @@
   border: none;
   background-color: transparent;
   transition: color 0.2s, border-bottom 0.2s;
+  font-size: 16px;
 }
   .tabs-container {
     padding: 20px;
     border-top: none;
     box-sizing: border-box;
   }
+
+@media (max-width: 1024px) {
+  .tabs {
+    padding-left: 40px;
+
+    button {
+      font-size: 14px;
+      padding: 10px 0;
+    }
+  }
+
+  .tabs-container {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tabs {
+    padding-left: 0;
+    flex-direction: column;
+    align-items: stretch;
+
+    button {
+      font-size: 14px;
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+      text-align: center;
+    }
+  }
+
+  .tabs-container {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tabs button {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .tabs-container {
+    padding: 8px;
+  }
+}

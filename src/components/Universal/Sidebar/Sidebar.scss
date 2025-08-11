@@ -129,7 +129,7 @@
     padding-left: 18px;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1024px) {
     .sidebar {
         position: fixed;
         top: 0;
@@ -156,7 +156,6 @@
             align-items: center;
             color: #fff;
             padding: 12px 0;
-            gap: 18;
         }
     }
 

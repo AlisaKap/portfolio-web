@@ -1,7 +1,13 @@
  .illustrate-page img {
   padding-top:12px;
   display: block;
-  margin: 0 260px;
+  margin: 0 auto;
   max-width: 80vw;
   height: auto;
+   padding-left: 260px;
+
+   @media (max-width: 1024px) {
+     padding-left: 16px;
+   }
+
 }

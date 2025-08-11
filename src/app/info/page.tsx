@@ -60,7 +60,7 @@ export default function InfoPage() {
                             </div>
                         </>
                     }
-                    positionStyle={{top: "22%", left: "19%"}}
+                    positionStyle={{top: "20%", left: "42%"}}
                 />
 
                 <RotatedCheck
@@ -113,7 +113,7 @@ export default function InfoPage() {
                             </div>
                         </>
                     }
-                    positionStyle={{top: "3%", left: "48%"}}
+                    positionStyle={{top: "3%", left: "10%"}}
                 />
             </div>
 
