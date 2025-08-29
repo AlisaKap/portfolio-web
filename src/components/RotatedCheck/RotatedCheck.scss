@@ -6,7 +6,7 @@
 
 .check-content {
   padding: 4.5rem;
-  height: 1000px;
+  height: 960px;
   width: 600px;
   position: relative;
 
@@ -26,6 +26,32 @@
   height: 1200px;
   width: 560px;
   position: relative;
+}
+
+.rotated-container {
+  position: absolute;
+  z-index: 10;
+}
+
+.check-content {
+  width: 620px;   // ширина по умолчанию
+  padding: 2.5rem;
+  margin: 0 auto;
+
+  @media (max-width: 1024px) {
+    width: 500px;
+    padding: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    width: 460px;
+    padding: 1.5rem;
+  }
+
+  @media (max-width: 480px) {
+    width: 360px;
+    padding: 1.5rem;
+  }
 }
 
 .check-title {

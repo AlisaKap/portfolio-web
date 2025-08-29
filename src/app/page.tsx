@@ -21,6 +21,7 @@ export default function HomePage() {
     return (
         <main>
             <div className="background-container-home">
+                <img className="homeIcon" src="/icons/home.png" alt="Главная" />
                 <h1>CREATOR</h1>
                 <h2 className={myFont.variable} style={{ fontFamily: "var(--font-NAURYZREDKEDS)" }}>
                     PORTFOLIO
@@ -29,7 +30,6 @@ export default function HomePage() {
                     Меня зовут Алиса или elleipsis (от греч. выпадение).
                     Здесь собраны мои работы из различных сфер деятельности (от промышленного дизайн до разработки игр в UE5).
                     Некоторые из них до сих пор в разработке, но совсем скоро они будут опубликованы здесь. Благодарю за интерес к моему творчеству и приятного просмотра!</p>
-                <div>2025</div>
             </div>
         </main>
     );

@@ -1,27 +1,73 @@
+body.info-page-bg {
+  margin: 0;
+  background-color: #2C311A;
+  overflow-x: hidden;
+}
+
 .background-container {
-  background-image: url('/images/info/aboutMe.png');
+  position: relative;
+  min-height: 200vh;
+  width: 100%;
+  overflow: visible;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 100vh;
   padding: 1rem;
-  position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
   height: 100vh;
   z-index: -1;
 
-  .letter-icon {
+  &::before {
+    content: '';
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -2;
+  }
+
+  .homePhoto {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 80vh;
+    z-index: -1;
+
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
+
+  .letter-icon {
+    top: -120px;
     right: 400px;
-    z-index: -1000;
+    z-index: -1;
   }
 
 }
 
-.background-container img {
+.list-block-educate h4 {
+  margin-top: 1.5rem;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 14px;
+  color: #512C10;
 
+}
+
+.list-block-educate p {
+  margin-bottom: 0.5rem;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 13px;
+  color: #7E6069;
+
+}
+
+.background-container img {
   top: 0;
   right: -6%;
   height: 80vh;
@@ -32,7 +78,6 @@
     display: none;
   }
 }
-
 
 .grid-list {
   display: grid;
@@ -45,157 +90,88 @@
 
   @media (max-width: 768px) {
     gap: 0.5rem;
-    width: 300px;
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 100%;
   }
-
 }
 
-.grid-list p {
+.grid-list p,
+.list-block-educate p, {
   font-family: 'Ubuntu', sans-serif;
-  font-size: 15px;
-  margin-bottom: 1.3rem;
   color: #512C10;
-
-  @media (max-width: 768px) {
-    margin-bottom: 1rem;
-    font-size: 14px;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 8px;
-  }
-}
-
-h6 {
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 45px;
-  font-weight: bold;
-  color: #fff;
-
-  @media (max-width: 1024px) {
-    font-size: 38px;
-  }
-
-  @media (max-width: 768px) {
-    font-size: 30px;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 24px;
-  }
-}
-
-
-
-h5 {
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 22px;
-  color: #fff;
-
-  @media (max-width: 768px) {
-    font-size: 20px;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 14px;
-  }
-}
-
-h4 {
-
-  @media (max-width: 480px) {
-    margin-top: 0.5rem;
-  }
-}
-
-h3 {
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 1.5rem;
-  margin-top: 1.2rem;
-  color: #512C10;
-
-  @media (max-width: 768px) {
-    font-size: 20px;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 14px;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-  }
-}
-
-h2 {
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 22px;
-  color: #512C10;
-
-  @media (max-width: 768px) {
-    font-size: 20px;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 14px;
-  }
-}
-
-h1 {
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 45px;
-  font-weight: bold;
-  color: #B34343;
-
-  @media (max-width: 1024px) {
-    font-size: 38px;
-  }
-
-  @media (max-width: 768px) {
-    font-size: 30px;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 18px;
-  }
-}
-
-.list-block-educate h4 {
-  margin-top: 1.5rem;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 14px;
-  color: #512C10;
-
-  @media (max-width: 480px) {
-    font-size: 8px;
-  }
-}
-
-.list-block-educate p {
-  margin-bottom: 0.5rem;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 13px;
-  color: #7E6069;
-
-  @media (max-width: 480px) {
-    font-size: 8px;
-  }
+  word-break: break-word;
+  overflow-wrap: break-word;
+  margin-bottom: 1.1rem;
 }
 
 .list-block-hack p {
-  margin-top: 1.5rem;
-  line-height: 1.5;
-  font-family: 'Ubuntu', sans-serif;
+  margin-top: 1.1rem;
   font-size: 15px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 100;
   color: #fff;
-
-  @media (max-width: 768px) {
-    font-size: 14px;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 8px;
-  }
+  word-break: break-word;
+  overflow-wrap: break-word;
+  margin-bottom: 1.1rem;
+  line-height: 1.5;
 }
 
+.list-block-educate,
+.list-block-hack {
+  max-width: 100%;
+  padding: 0;
+}
+
+.list-block-educate h4,
+.list-block-hack h4 {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Ubuntu', sans-serif;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+h1 { font-size: 45px; color: #B34343; font-weight: bold; }
+h2 { font-size: 22px; color: #512C10; }
+h3 { font-size: 24px; color: #512C10; font-weight: bold; font-family: 'Ubuntu', sans-serif; margin-bottom: 1.5rem; margin-top: 1.2rem;}
+h4 { font-size: 14px; color: #512C10; }
+h5 { font-size: 22px; color: #fff; }
+h6 { font-size: 45px; font-weight: bold; color: #fff; }
+
+@media (max-width: 1024px) {
+  h1 { font-size: 38px; }
+  h2 { font-size: 20px; }
+  h3 { font-size: 20px; }
+  h5 { font-size: 20px; }
+  h6 { font-size: 38px; }
+
+}
+
+@media (max-width: 768px) {
+  h1 { font-size: 30px; }
+  h2 { font-size: 20px; }
+  h3 { font-size: 20px; }
+  h5 { font-size: 20px; }
+  h6 { font-size: 30px; }
+  p { font-size: 14px; }
+
+  .grid-list { gap: 0.5rem; }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 20px; }
+  h2 { font-size: 18px; }
+  h3 { font-size: 18px; }
+  h5 { font-size: 18px; }
+  h6 { font-size: 24px; }
+  .list-block-educate h4, .list-block-educate p,
+  .list-block-hack p { font-size: 12px; line-height: 1.5; }
+
+  .grid-list p {font-size: 14px; margin-bottom: 0.8rem;}
+  .grid-list { width: 100%; }
+}
 
